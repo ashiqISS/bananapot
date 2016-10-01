@@ -18,7 +18,6 @@ class LoginAsset extends AssetBundle {
             'plugins/node-waves/waves.js',
             'plugins/jquery-validation/jquery.validate.js',
             'js/admin.js',
-            'js/pages/examples/sign-in.js',
         ];
         public $depends = [
             'yii\web\YiiAsset',
