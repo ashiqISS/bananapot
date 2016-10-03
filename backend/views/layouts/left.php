@@ -8,7 +8,7 @@
                     'items' => [
 
                         ['label' => 'Dashboard', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
-                        ['label' => 'Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
+                        ['label' => 'Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/users']],
                         [
                             'label' => 'Master Entries',
                             'icon' => 'fa fa-share',
@@ -24,23 +24,6 @@
                                 ['label' => 'Tax Class', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                                 ['label' => 'Contact Us', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                                 ['label' => 'Social', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
-                            /*  [
-                              'label' => 'Level One',
-                              'icon' => 'fa fa-circle-o',
-                              'url' => '#',
-                              'items' => [
-                              ['label' => 'Level Two', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                              [
-                              'label' => 'Level Two',
-                              'icon' => 'fa fa-circle-o',
-                              'url' => '#',
-                              'items' => [
-                              ['label' => 'Level Three', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                              ['label' => 'Level Three', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                              ],
-                              ],
-                              ],
-                              ], */
                             ],
                         ],
                     ],
