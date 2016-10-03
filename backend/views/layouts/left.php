@@ -6,8 +6,10 @@
                 [
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
+                    	
 
                         ['label' => 'Dashboard', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
+                    	['label' => 'Admin Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin-users']],
                         ['label' => 'Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/users']],
                         [
                             'label' => 'Master Entries',
@@ -26,6 +28,8 @@
                                 ['label' => 'Social', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                             ],
                         ],
+                    		['label' => 'Categories', 'icon' => 'fa fa-file-code-o', 'url' => ['/users']],
+                    		['label' => 'Products', 'icon' => 'fa fa-file-code-o', 'url' => ['/users']],
                     ],
                 ]
         )

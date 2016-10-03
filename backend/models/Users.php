@@ -24,7 +24,7 @@ class Users extends \yii\db\ActiveRecord {
         /**
          * @inheritdoc
          */
-        public $confirmpassword;
+       
 
         public static function tableName() {
                 return 'users';
@@ -35,7 +35,7 @@ class Users extends \yii\db\ActiveRecord {
          */
         public function rules() {
                 return [
-                    [['username', 'auth_key', 'password_hash', 'confirmpassword', 'email', 'status', 'role'], 'required'],
+                    [['username', 'auth_key', 'password_hash', 'email', 'status', 'role'], 'required'],
                     [['status', 'role'], 'integer'],
                     [['created_at', 'updated_at'], 'safe'],
                     [['username', 'name', 'password_hash', 'password_reset_token'], 'string', 'max' => 255],
