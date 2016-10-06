@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "DancingScript";
-    src: url(../fonts/DancingScript-Regular.otf) format("truetype");
+    src: url(fonts/DancingScript-Regular.otf) format("truetype");
 }
 
 a:focus, a:hover {
