@@ -68,7 +68,7 @@ class LoginForm extends Model {
          */
         protected function getUser() {
                 if ($this->_user === null) {
-                        $this->_user = AdminUsers::findByUsername($this->username);
+                        $this->_user = UsersAdmin::findByUsername($this->username);
                 }
                 return $this->_user;
         }

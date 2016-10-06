@@ -14,6 +14,11 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
+        <script type="text/javascript">
+                var baseurl = "<?php print \yii\helpers\Url::base() . "/index.php/"; ?>";
+                var basepath = "<?php print \yii\helpers\Url::base(); ?>";
+
+        </script>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <?php $this->beginBody() ?>
