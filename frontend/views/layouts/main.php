@@ -37,7 +37,7 @@ $bundle = AppAsset::register($this);
                                         <div class="row">
                                                 <div class="col-xs-12">
                                                         <ul>
-                                                                <li><a href="#" class="active">Home</a></li>
+                                                                <li><?= Html::a('Home', ['site/index'], ['class' => 'active']); ?></li>
                                                                 <li class="dropdown collection_drop">
                                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
                                                                         <ul class="dropdown-menu">
@@ -48,8 +48,8 @@ $bundle = AppAsset::register($this);
                                                                 </li>
                                                                 <li><a href="#">Blog</a></li>
                                                                 <li><a href="#">About Us</a></li>
-                                                                <li><a href="#">Login</a></li>
-                                                                <li><a href="#">Contact</a></li>
+                                                                <li><?= Html::a('Login', ['site/login']) ?></li>
+                                                                <li><?= Html::a('Sign Up', ['site/login']) ?></li>
                                                         </ul>
                                                 </div>
                                         </div>
