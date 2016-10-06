@@ -48,6 +48,7 @@ $bundle = AppAsset::register($this);
                                                                 </li>
                                                                 <li><a href="#">Blog</a></li>
                                                                 <li><a href="#">About Us</a></li>
+                                                                <li><a href="#">Login</a></li>
                                                                 <li><a href="#">Contact</a></li>
                                                         </ul>
                                                 </div>
@@ -164,53 +165,174 @@ $bundle = AppAsset::register($this);
 
 
                 <?= $content ?>
+                <section class="contact">
+                        <div class="contact_banner">
+                                <div class="container">
+                                        <div class="row">
+                                                <div class="hidden-xs col-xs-12 col-sm-4">
+                                                        <div class="contact_img">
+                                                                <img class="cont_bnr img-responsive" src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/contact_img.jpg">
+                                                        </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                        <div class="row">
+                                                                <div class="contact_right_side wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                                                                        <h2>Touch with us</h2>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur ad
+                                                                        </p>
+                                                                        <div class="col-sm-6">
+                                                                                <span class="input input--ruri">
+                                                                                        <input class="input__field input__field--ruri" type="text" id="input-26" />
+                                                                                        <label class="input__label input__label--ruri" for="input-26">
+                                                                                                <span class="input__label-content input__label-content--ruri">Enter Your Name</span>
+                                                                                        </label>
+                                                                                </span>
 
-                <section class="newsletter">
-                        <div class="container">
-                                <div class="row">
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                                <span class="input input--ruri">
+                                                                                        <input class="input__field input__field--ruri" type="text" id="input-26" />
+                                                                                        <label class="input__label input__label--ruri" for="input-26">
+                                                                                                <span class="input__label-content input__label-content--ruri">Enter Your Telephone</span>
+                                                                                        </label>
+                                                                                </span>
 
-                                        <div class="col-md-4 col-sm-6 col-xs-6 six">
-                                                <img class="min img-responsive" src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/logo.png">
-                                                <h6 class="hid">© Copyright 2016 Master mbbs.
-                                                        All Rights Reserved
-                                                        Developed By Intersmart</h6>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-6 six">
-                                                <h4>CONTACT DETAILS</h4>
-                                                <ul>
-                                                        <li><a href="#">Home</a></li>
-                                                        <li><a href="#">About Us</a></li>
-                                                        <li><a href="#">Services</a></li>
-                                                        <li><a href="#">Contact Us</a></li>
-                                                        <li><a href="#">Login</a></li>
-                                                        <li><a href="#">Register</a></li>
-                                                </ul>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6 col-xs-6 six">
-                                                <h4>Find Us On</h4>
-                                                <h3><a href="#">Facebook</a></h3>
-                                                <h3><a href="#">Google+</a></h3>
-                                                <h3><a href="#">Twitter</a></h3>
-                                                </ul>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-6 six">
-                                                <h4>CONTACT DETAILS</h4>
-                                                <p>Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit, sed do
-                                                        info@mastermbbs.com</p>
-                                                <p>+90 123 45 67, +90 123 45 68</p>
-                                                <h6 class="show">© Copyright 2016 Master mbbs.
-                                                        All Rights Reserved
-                                                        Developed By Intersmart</h6>
-                                        </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                                <span class="input input--ruri">
+                                                                                        <input class="input__field input__field--ruri" type="text" id="input-26" />
+                                                                                        <label class="input__label input__label--ruri" for="input-26">
+                                                                                                <span class="input__label-content input__label-content--ruri">Enter Your User Name</span>
+                                                                                        </label>
+                                                                                </span>
 
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                                <span class="input input--ruri">
+                                                                                        <input class="input__field input__field--ruri" type="text" id="input-26" />
+                                                                                        <label class="input__label input__label--ruri" for="input-26">
+                                                                                                <span class="input__label-content input__label-content--ruri">Company/Organization</span>
+                                                                                        </label>
+                                                                                </span>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                                <span class="input input--ruri">
+                                                                                        <textarea class="form-control input__field input__field--ruri" rows="1"></textarea>
+                                                                                        <label class="input__label input__label--ruri" for="input-26">
+                                                                                                <span class="input__label-content input__label-content--ruri">Enter Your Message</span>
+                                                                                        </label>
+                                                                                </span>
+                                                                        </div>
+                                                                        <button type="submit" class="btn btn-primary message_btn"><span>Send Message</span></button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
                                 </div>
                         </div>
                 </section>
 
+
+
+
+
+                <footer class="footer">
+                        <div class="container">
+                                <div class="footer_cnt">
+                                        <div class="row">
+                                                <div class="col-xs-12 col-sm-3 wow fadeIn "data-wow-duration="1.5s" data-wow-delay=".5s">
+                                                        <img class="ft_logo" src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/logo.png">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem..</p>
+                                                        <a href="#" class="Read_more">Read More </a>
+                                                        <i class="fa fa-long-arrow-right read_arrow"></i>
+                                                </div>
+                                                <div class="footer_midd wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".8s">
+                                                        <div class="col-xs-12 col-sm-2">
+                                                                <h3>Home</h3>
+                                                                <ul class="list-unstyled ">
+                                                                        <li><a href="">Home</a></li>
+                                                                        <li><a href="">Collections</a></li>
+                                                                        <li><a href="">About Us</a></li>
+                                                                        <li><a href="">Contact Us</a></li>
+                                                                        <li><a href="">Our Blog</a></li>
+                                                                        <li><a href="">Faq</a></li>
+                                                                </ul>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-2 centr_contnt">
+                                                                <ul class="list-unstyled ">
+                                                                        <li><a href="">Security & Privacy</a></li>
+                                                                        <li><a href="">Help</a></li>
+                                                                        <li><a href="">Customer Services</a></li>
+                                                                        <li><a href="">Term Of Use</a></li>
+                                                                        <li><a href="">Site Map</a></li>
+                                                                </ul>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-2">
+                                                                <h3>MY ACCOUNT</h3>
+                                                                <ul class="list-unstyled ">
+                                                                        <li><a href="">My Cart</a></li>
+                                                                        <li><a href="">Checkout</a></li>
+                                                                        <li><a href="">CMy account</a></li>
+                                                                        <li><a href="">Order history</a></li>
+                                                                        <li><a href="">My addresses</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </DIV>
+                                                <div class="col-xs-12 col-sm-3 wow fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+                                                        <h3>SUBCRIBLE TO OUR NEWSLETTER</h3>
+                                                        <p>Make sure you dont miss interesting happenings by joining our newsletter program.</p>
+                                                        <form class="form-inline">
+                                                                <div class="form-group">
+                                                                        <div class="form-group">
+                                                                                <!--                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>-->
+                                                                                <input type="email" class="form-control email_subscri" id="exampleInputEmail3" placeholder="Enter Email Adress">
+                                                                        </div>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-primary subscribe_btn"><span>Subcrible</span></button>
+                                                        </form>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                        <div class="bottom_link">
+                                <div class="container">
+                                        <div class="row">
+                                                <div class="col-xs-12 col-sm-5">
+                                                        <p> © 2016 Banana Pot. All Rights Reserved. Made by Intersmart.in</p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-7">
+                                                        <img class="img-responsive" src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/cards.png">
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="modal_dis">
+                                <div class="modal fade-scale" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title"><img class="tick" src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/tick.png">Success</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                <div class="modal_img">
+                                                                        <img src="<?= Yii::getAlias('@web'); ?>/frontend/web/images/combo_img1.jpg">
+                                                                </div>
+                                                                <p>You have added <strong>Consectetur Adipisicing Elit</strong> to your shopping cart!</p>
+                                                                <ul class="list-unstyled list-inline">
+                                                                        <li><a href="#" class="btn modal_btn btn-default"><span>Go To Shopping Bag </span></a></li>
+                                                                        <li><a href="#" class="btn modal_btn btn-default"><span>Proceed To Checkout</span></a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </footer>
+
+                <?php $this->endBody() ?>
+                <?php $this->endPage() ?>
         </body>
 </html>
-<?php $this->endBody() ?>
-</body>
-</html>
-<?php $this->endPage() ?>
