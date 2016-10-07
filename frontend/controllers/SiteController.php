@@ -8,8 +8,8 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use frontend\models\UserDetails;
 
-//use frontend\models\StudentLoginForm;
 //use frontend\models\PasswordResetRequestForm;
 //use frontend\models\ResetPasswordForm;
 //use frontend\models\ContactForm;
@@ -140,20 +140,23 @@ class SiteController extends Controller {
                 return $this->render('services');
         }
 
-        public function actionRegister() {
-                $model = new Students();
-                $model->role = 1;
-                if ($model->load(Yii::$app->request->post())) {
-                        if ($model->register()) {
-                                if (Yii::$app->getUser()->login($model)) {
-                                        if (sendMail()) {
-                                                echo "ok";
-                                        }
-                                        return $this->goHome();
-                                }
-                        }
-                }
+        public function actionSignup() {
+//                echo 'hiiii';
+                $model = new UserDetails();
                 return $this->render('register', ['model' => $model]);
+
+//                $model->role = 1;
+//                if ($model->load(Yii::$app->request->post())) {
+//                        if ($model->register()) {
+//                                if (Yii::$app->getUser()->login($model)) {
+//                                        if (sendMail()) {
+//                                                echo "ok";
+//                                        }
+//                                        return $this->goHome();
+//                                }
+//                        }
+//                }
+//                return $this->render('register', ['model' => $model]);
         }
 
         /**

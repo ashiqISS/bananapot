@@ -49,7 +49,7 @@ $bundle = AppAsset::register($this);
                                                                 <li><a href="#">Blog</a></li>
                                                                 <li><a href="#">About Us</a></li>
                                                                 <li><?= Html::a('Login', ['site/login']) ?></li>
-                                                                <li><?= Html::a('Sign Up', ['site/login']) ?></li>
+                                                                <li><?= Html::a('Sign Up', ['site/signup']) ?></li>
                                                         </ul>
                                                 </div>
                                         </div>
