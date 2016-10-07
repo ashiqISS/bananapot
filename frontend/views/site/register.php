@@ -25,66 +25,6 @@
                                                                                 </div>
                                                                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                                                                         <ul class="nav navbar-nav">
-                                                                                                <div class="side_menu">
-
-                                                                                                        <div class="panel-group" id="accordion">
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel1">Account Dashboard<i class="fa fa-angle-right angle_edit"></i></a>
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel2">Account Information<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel3">Security<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel4">My Orders<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel5">My Wishlist<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel6">Address Book<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                                <div class="panel panel-default">
-                                                                                                                        <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                                                <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel7">Store Credits<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-
-                                                                                                        </div>
-
-                                                                                                </div>
 
                                                                                         </ul>
 
@@ -97,63 +37,6 @@
 
 
                                                                 <div class="inside">
-                                                                        <div class="side_menu2 hidden-xs ">
-                                                                                <div class="panel-group hidden-xs" id="accordion">
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel20">Account Dashboard<i class="fa fa-angle-right angle_edit"></i></a>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel21">Account Information<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel22">Security<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel23">My Orders<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed active" data-toggle="collapse" data-parent="#accordion" href="#panel24">My Wishlist<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel25">Address Book<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="panel panel-default">
-                                                                                                <div class="panel-heading  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-
-                                                                                                        <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel26">Store Credits<i class="fa fa-angle-right angle_edit"></i></a>
-
-
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
                                                                 </div>
                                                         </aside>
 
@@ -162,37 +45,65 @@
                                         <div class="main_content col-xs-12 col-sm-9" id="content">
                                                 <div class="account_info">
                                                         <ul class="list-inline list-unstyled right_top_way">
-                                                                <li><a class="simple" href="#">Home </a> &nbsp; &nbsp; <i class="fa fa-angle-double-right"></i></li>
-                                                                <li>Account Information</li>
+                                                                <li><a class="simple" href="#">Bananapot </a> &nbsp; &nbsp; <i class="fa fa-angle-double-right"></i></li>
+                                                                <li>Registration</li>
                                                         </ul>
                                                         <?php
 
                                                         use yii\helpers\Html;
                                                         use yii\widgets\ActiveForm;
+                                                        use yii\helpers\Url;
+                                                        use yii\helpers\ArrayHelper;
                                                         ?>
-                                                        <?php $form = ActiveForm::begin(['id' => 'user-details-form', 'options' => ['role' => 'form']]); ?>
+                                                        <?php
+                                                        $form = ActiveForm::begin(['id' => 'user-details-form', 'options' => ['role' => 'form']]);
+                                                        $labels = $model->attributeLabels();
+                                                        ?>
+
                                                         <div class="row">
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <?= $form->field($model, 'first_name')->textInput(['class' => 'input__field input__field--fumi', 'placeholder' => 'firstname']) ?>
-                                                                                <label class="input__label input__label--fumi" for="input-24">
+                                                                                <?= Html::activeTextInput($model, 'first_name', ['class' => 'input__field input__field--fumi']); ?>
+                                                                                <label class="input__label input__label--fumi" for="input-23">
                                                                                         <i class="fa fa-fw fa-user icon icon--fumi" aria-hidden="true"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">fIRST Name:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"> <?= Html::activeLabel($model, 'first_name'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'first_name'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-24" />
+                                                                                <?= Html::activeTextInput($model, 'last_name', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-24">
                                                                                         <i class="fa fa-fw fa-user icon icon--fumi" aria-hidden="true"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Last Name:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'last_name'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'last_name'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?php
+                                                                                $from = date('Y') - 80;
+                                                                                $to = date('Y') + 20;
+                                                                                $this->widget('widgets.jui.CJuiDatePicker', array(
+                                                                                    'model' => $model,
+                                                                                    'attribute' => 'dob',
+                                                                                    'value' => 'dob',
+                                                                                    'options' => array(
+                                                                                        'dateFormat' => 'yy-mm-dd',
+                                                                                        'changeYear' => true, // can change year
+                                                                                        'changeMonth' => true, // can change month
+                                                                                        'yearRange' => $from . ':' . $to, // range of year
+                                                                                        'showButtonPanel' => true, // show button panel
+                                                                                    ),
+                                                                                    'htmlOptions' => array(
+                                                                                        'size' => '10', // textField size
+                                                                                        'maxlength' => '10', // textField maxlength
+                                                                                        'class' => 'input__field input__field--fumi',
+                                                                                    ),
+                                                                                ));
+                                                                                ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-calendar icon icon--fumi"></i>
                                                                                         <span class="input__label-content input__label-content--fumi">Date Of Birth:</span>
@@ -213,7 +124,7 @@
                                                                                 <input class="input__field input__field--fumi" type="text" id="input-25" />
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-envelope icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">E-mai:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi">E-maii:</span>
                                                                                 </label>
                                                                         </span>
                                                                 </div>
