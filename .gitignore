@@ -31,3 +31,7 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+/common/config/
+/frontend/config/
+/frontend/assets/
+!/vendor/
