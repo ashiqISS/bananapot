@@ -1,4 +1,11 @@
+<?php
 
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
+use kartik\date\DatePicker;
+?>
 <html>
         <head>
                 <title>Account Information</title>
@@ -48,13 +55,20 @@
                                                                 <li><a class="simple" href="#">Bananapot </a> &nbsp; &nbsp; <i class="fa fa-angle-double-right"></i></li>
                                                                 <li>Registration</li>
                                                         </ul>
-                                                        <?php
 
-                                                        use yii\helpers\Html;
-                                                        use yii\widgets\ActiveForm;
-                                                        use yii\helpers\Url;
-                                                        use yii\helpers\ArrayHelper;
-                                                        ?>
+                                                        <?php if (Yii::$app->session->hasFlash('success')): ?>
+                                                                <div class="alert alert-success ">
+                                                                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                                                        <strong>Success!</strong> <?= Yii::$app->session->getFlash('success'); ?>
+                                                                </div>
+                                                        <?php endif; ?>
+                                                        <?php if (Yii::$app->session->hasFlash('error')): ?>
+                                                                <div class="alert alert-danger ">
+                                                                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                                                        <strong>Danger!</strong><?= Yii::$app->session->getFlash('error'); ?>
+                                                                </div>
+                                                        <?php endif; ?>
+
                                                         <?php
                                                         $form = ActiveForm::begin(['id' => 'user-details-form', 'options' => ['role' => 'form']]);
                                                         $labels = $model->attributeLabels();
@@ -84,106 +98,101 @@
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
                                                                                 <?php
-                                                                                $from = date('Y') - 80;
-                                                                                $to = date('Y') + 20;
-                                                                                $this->widget('widgets.jui.CJuiDatePicker', array(
-                                                                                    'model' => $model,
-                                                                                    'attribute' => 'dob',
-                                                                                    'value' => 'dob',
-                                                                                    'options' => array(
-                                                                                        'dateFormat' => 'yy-mm-dd',
-                                                                                        'changeYear' => true, // can change year
-                                                                                        'changeMonth' => true, // can change month
-                                                                                        'yearRange' => $from . ':' . $to, // range of year
-                                                                                        'showButtonPanel' => true, // show button panel
-                                                                                    ),
-                                                                                    'htmlOptions' => array(
-                                                                                        'size' => '10', // textField size
-                                                                                        'maxlength' => '10', // textField maxlength
-                                                                                        'class' => 'input__field input__field--fumi',
-                                                                                    ),
-                                                                                ));
+                                                                                echo DatePicker::widget([
+                                                                                    'name' => 'check_issue_date',
+                                                                                    'value' => date('d-M-Y', strtotime('+2 days')),
+                                                                                    'options' => ['placeholder' => 'Select issue date ...'],
+                                                                                    'pluginOptions' => [
+                                                                                        'class' => 'input__label input__label--fumi',
+                                                                                        'format' => 'dd-M-yyyy',
+                                                                                        'todayHighlight' => true
+                                                                                    ]
+                                                                                ]);
                                                                                 ?>
-                                                                                <label class="input__label input__label--fumi" for="input-25">
-                                                                                        <i class="fa fa-fw fa-calendar icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Date Of Birth:</span>
-                                                                                </label>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeDropDownList($model, 'gender', ['' => '', '0' => 'Male', '1' => 'Fe-male'], ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-male icon icon--fumi "></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Gender:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'gender'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'gender'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'email', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-envelope icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">E-maii:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'email'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'email'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'phone', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-phone icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Phone:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'phone'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'phone'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'phone_no_2', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-phone icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Phone No 2:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'phone_no_2'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'phone_no_2'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'fax', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
-                                                                                        <i class="fa fa-fw fa-fax icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Fax:</span>
+                                                                                        <i class="fa fa-fax fa-phone icon icon--fumi"></i>
+                                                                                        <!--<i class="fa fa-fw fa-phone icon icon--fumi"></i>-->
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'fax'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'fax'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
-                                                                                <label class="input__label input__label--fumi" for="input-25">
-                                                                                        <i class="fa fa-fw fa-key icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Password:</span>
-                                                                                </label>
-                                                                        </span>
-                                                                </div>
-                                                                <div class="col-xs-12 col-sm-4">
-                                                                        <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'password', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
                                                                                         <i class="fa fa-fw fa-key icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Confirm:</span>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'password'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'password'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <input class="input__field input__field--fumi" type="text" id="input-25" />
+                                                                                <?= Html::activeTextInput($model, 'confirm_password', ['class' => 'input__field input__field--fumi']); ?>
                                                                                 <label class="input__label input__label--fumi" for="input-25">
-                                                                                        <i class="fa fa-fw fa-newspaper-o icon icon--fumi"></i>
-                                                                                        <span class="input__label-content input__label-content--fumi">Newsletter:</span>
+                                                                                        <i class="fa fa-fw fa-key icon icon--fumi"></i>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'confirm_password'); ?>:</span>
                                                                                 </label>
+                                                                                <?= Html::error($model, 'confirm_password'); ?>
+                                                                        </span>
+                                                                </div>
+                                                                <div class="col-xs-12 col-sm-4">
+                                                                        <span class="input input--fumi">
+                                                                                <?= Html::activeDropDownList($model, 'newsletter', ['' => '', '0' => 'No', '1' => 'Yes'], ['class' => 'input__field input__field--fumi']); ?>
+                                                                                <label class="input__label input__label--fumi" for="input-25">
+                                                                                        <i class="fa fa-newspaper-o fa-male icon icon--fumi "></i>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'newsletter'); ?>:</span>
+                                                                                </label>
+                                                                                <?= Html::error($model, 'newsletter'); ?>
                                                                         </span>
                                                                 </div>
                                                         </div>
-                                                        <?php ActiveForm::end(); ?>
                                                         <button type="submit" class="btn btn-primary buynow_btn save_btn "><span>SAVE</span></button>
                                                         <div class="budget_section living_budget wow fadeIn" data-wow-duration="3s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 3s; animation-delay: 0.1s; animation-name: fadeIn;">
                                                                 <div class="row">
@@ -212,6 +221,7 @@
                                                                         </div>
                                                                 </div>
                                                         </div>
+                                                        <?php ActiveForm::end(); ?>
                                                 </div>
                                         </div>
                                 </div>
@@ -219,27 +229,27 @@
 
                 </section>
 
-<!--                <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-<script src="js/slick.js" type="text/javascript"></script>
-<script src="js/classie.js" type="text/javascript"></script>
-<script src="js/jquery.fs.selecter.min.js" type="text/javascript"></script>
-<script src="js/wow.js" type="text/javascript"></script>
-<script src="js/jquery-ui.js" type="text/javascript"></script>
-<script src="js/nivo-lightbox.js"></script>
-<script src="js/stickySidebar.js"></script>
-<script src="js/custom.js" type="text/javascript"></script>-->
+                                                                                <!--                <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+                                                                                <script src="js/bootstrap.js" type="text/javascript"></script>
+                                                                                <script src="js/slick.js" type="text/javascript"></script>
+                                                                                <script src="js/classie.js" type="text/javascript"></script>
+                                                                                <script src="js/jquery.fs.selecter.min.js" type="text/javascript"></script>
+                                                                                <script src="js/wow.js" type="text/javascript"></script>
+                                                                                <script src="js/jquery-ui.js" type="text/javascript"></script>
+                                                                                <script src="js/nivo-lightbox.js"></script>
+                                                                                <script src="js/stickySidebar.js"></script>
+                                                                                <script src="js/custom.js" type="text/javascript"></script>-->
 
-<!--        <script>
+                                                                                <!--        <script>
 
-                (function($))(jQuery);
-                        var selectIds = $('#panel1,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8,#panel9,#panel20,#panel21,#panel22,#panel23,#panel24,#panel25,#panel26,#panel27,#panel28,#panel2');
-                $(function ($) {
-                    selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
-                        $(this).prev().find('.glyphicon').toggleClass('glyphicon-plus glyphicon-minus');
-                    })
-                });
-        </script>-->
+                                                                                (function($))(jQuery);
+                                                                                var selectIds = $('#panel1,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8,#panel9,#panel20,#panel21,#panel22,#panel23,#panel24,#panel25,#panel26,#panel27,#panel28,#panel2');
+                                                                                $(function ($) {
+                                                                                selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
+                                                                                $(this).prev().find('.glyphicon').toggleClass('glyphicon-plus glyphicon-minus');
+                                                                                })
+                                                                                });
+                                                                                </script>-->
 
 
 

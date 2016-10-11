@@ -141,22 +141,21 @@ class SiteController extends Controller {
         }
 
         public function actionSignup() {
-//                echo 'hiiii';
                 $model = new UserDetails();
+                if ($model->load(Yii::$app->request->post())) {
+                        $model->load(Yii::$app->request->post());
+                        $model->doc = date('Y-m-d');
+                        $model->status = 1;
+                        $model->email_verification = 0;
+                        if ($model->save(false)) {
+                                Yii::$app->getSession()->setFlash('success', " You are registered successfully!!! Check your mail and verify your account");
+                                return $this->redirect(['signup']);
+                        } else {
+                                Yii::app()->user->setFlash('error', "Error Occured!!!!");
+                                return $this->redirect(['signup']);
+                        }
+                }
                 return $this->render('register', ['model' => $model]);
-
-//                $model->role = 1;
-//                if ($model->load(Yii::$app->request->post())) {
-//                        if ($model->register()) {
-//                                if (Yii::$app->getUser()->login($model)) {
-//                                        if (sendMail()) {
-//                                                echo "ok";
-//                                        }
-//                                        return $this->goHome();
-//                                }
-//                        }
-//                }
-//                return $this->render('register', ['model' => $model]);
         }
 
         /**
