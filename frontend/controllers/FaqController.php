@@ -11,7 +11,7 @@ use yii\web\NotFoundHttpException;
 class FaqController extends Controller {
 
         public function actionIndex() {
-                $model = Faq::find()->where(['status' => 1])->orderBy('id DESC')->all();
+                $model = Faq::find()->where(['status' => 1])->limit('5')->orderBy('id DESC')->all();
                 return $this->render('index', ['model' => $model]);
         }
 

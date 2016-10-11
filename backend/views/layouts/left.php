@@ -30,6 +30,7 @@
                         ['label' => 'Categories', 'icon' => 'fa fa-file-code-o', 'url' => ['/category']],
                         ['label' => 'Products', 'icon' => 'fa fa-file-code-o', 'url' => ['/product']],
                         ['label' => 'Faq', 'icon' => 'fa fa-user-secret', 'url' => ['/faq']],
+                        ['label' => 'Contact', 'icon' => 'fa fa-contao', 'url' => ['/contact']],
                     ],
                 ]
         )
