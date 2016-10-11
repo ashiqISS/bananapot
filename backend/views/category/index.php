@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <?php
-    $gridColoums = ['parent', 'category_name', 'email',
+    $gridColoums = ['parent', 'category_name',
         ['class' => 'yii\grid\ActionColumn',
             'buttons' => [
                 'view' => function ($url, $model) {
@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
         $this->registerJs(
                 "$(document).ready(function() {
                $('#create_category').on('click',function(e){
-                        var url  = basepath + '/category/create';
+                        var url  = baseurl + 'category/create';
                          $('#categoryModal').modal('show')
                          .find('.modal-content')
                         .load(url);

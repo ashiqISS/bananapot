@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
         $this->registerJs(
                 "$(document).ready(function() {
                $('#create_admin').on('click',function(e){
-                        var url  = basepath + '/users-admin/create';
+                        var url  = baseurl + '/users-admin/create';
                          $('#userAdminModal').modal('show')
                          .find('.modal-content')
                         .load(url);

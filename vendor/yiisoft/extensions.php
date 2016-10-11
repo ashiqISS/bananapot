@@ -21,24 +21,6 @@ return array (
       '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
     ),
   ),
-  'kartik-v/yii2-dialog' => 
-  array (
-    'name' => 'kartik-v/yii2-dialog',
-    'version' => '1.0.1.0',
-    'alias' => 
-    array (
-      '@kartik/dialog' => $vendorDir . '/kartik-v/yii2-dialog',
-    ),
-  ),
-  'kartik-v/yii2-grid' => 
-  array (
-    'name' => 'kartik-v/yii2-grid',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
-    ),
-  ),
   'yiisoft/yii2-swiftmailer' => 
   array (
     'name' => 'yiisoft/yii2-swiftmailer',
@@ -46,33 +28,6 @@ return array (
     'alias' => 
     array (
       '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
-  'rmrevin/yii2-fontawesome' => 
-  array (
-    'name' => 'rmrevin/yii2-fontawesome',
-    'version' => '2.16.1.0',
-    'alias' => 
-    array (
-      '@rmrevin/yii/fontawesome' => $vendorDir . '/rmrevin/yii2-fontawesome',
-    ),
-  ),
-  'cebe/yii2-gravatar' => 
-  array (
-    'name' => 'cebe/yii2-gravatar',
-    'version' => '1.1.0.0',
-    'alias' => 
-    array (
-      '@cebe/gravatar' => $vendorDir . '/cebe/yii2-gravatar/cebe/gravatar',
-    ),
-  ),
-  'dmstr/yii2-adminlte-asset' => 
-  array (
-    'name' => 'dmstr/yii2-adminlte-asset',
-    'version' => '2.3.3.0',
-    'alias' => 
-    array (
-      '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
     ),
   ),
   'yiisoft/yii2-codeception' => 
@@ -109,6 +64,42 @@ return array (
     'alias' => 
     array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
+    ),
+  ),
+  'kartik-v/yii2-widget-datepicker' => 
+  array (
+    'name' => 'kartik-v/yii2-widget-datepicker',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/date' => $vendorDir . '/kartik-v/yii2-widget-datepicker',
+    ),
+  ),
+  'rmrevin/yii2-fontawesome' => 
+  array (
+    'name' => 'rmrevin/yii2-fontawesome',
+    'version' => '2.16.1.0',
+    'alias' => 
+    array (
+      '@rmrevin/yii/fontawesome' => $vendorDir . '/rmrevin/yii2-fontawesome',
+    ),
+  ),
+  'cebe/yii2-gravatar' => 
+  array (
+    'name' => 'cebe/yii2-gravatar',
+    'version' => '1.1.0.0',
+    'alias' => 
+    array (
+      '@cebe/gravatar' => $vendorDir . '/cebe/yii2-gravatar/cebe/gravatar',
+    ),
+  ),
+  'dmstr/yii2-adminlte-asset' => 
+  array (
+    'name' => 'dmstr/yii2-adminlte-asset',
+    'version' => '2.3.3.0',
+    'alias' => 
+    array (
+      '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
     ),
   ),
 );

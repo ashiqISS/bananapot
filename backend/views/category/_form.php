@@ -2,19 +2,32 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Category */
 /* @var $form yii\widgets\ActiveForm */
+
+$parentCategory = $model->Categories($parent = 0);
 ?>
 
 <div class="category-form" style="padding: 25px;">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'parent')->textInput(['maxlength' => true]) ?>
-
+    <? echo DatePicker::widget([
+    'name' => 'check_issue_date',
+    'value' => date('d-M-Y', strtotime('+2 days')),
+    'options' => ['placeholder' => 'Select issue date ...'],
+    'pluginOptions' => [
+    'format' => 'dd-M-yyyy',
+    'todayHighlight' => true
+    ]
+    ]);
+    ?>
     <?= $form->field($model, 'category_name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'parent')->dropDownList($parentCategory, ['prompt' => 'Select parent']); ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 

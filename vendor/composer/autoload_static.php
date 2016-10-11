@@ -29,8 +29,7 @@ class ComposerStaticInit3deb688766b06ff974f002c8e9a0672d
         ),
         'k' => 
         array (
-            'kartik\\grid\\' => 12,
-            'kartik\\dialog\\' => 14,
+            'kartik\\date\\' => 12,
             'kartik\\base\\' => 12,
         ),
         'd' => 
@@ -84,13 +83,9 @@ class ComposerStaticInit3deb688766b06ff974f002c8e9a0672d
         array (
             0 => __DIR__ . '/..' . '/rmrevin/yii2-fontawesome',
         ),
-        'kartik\\grid\\' => 
+        'kartik\\date\\' => 
         array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-grid',
-        ),
-        'kartik\\dialog\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-dialog',
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-datepicker',
         ),
         'kartik\\base\\' => 
         array (

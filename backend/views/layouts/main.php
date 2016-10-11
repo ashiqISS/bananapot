@@ -15,9 +15,9 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
-        <link rel="stylesheet" href="<?php echo Yii::$app->homeUrl; ?>css/custom.css">
+        <link rel="stylesheet" href="<?php echo Yii::$app->homeUrl; ?>/css/custom.css">
         <script type="text/javascript">
-                var baseurl = "<?php print \yii\helpers\Url::base() . "/index.php/"; ?>";
+                var baseurl = "<?php print \yii\helpers\Url::base() . "/index.php/?r="; ?>";
                 var basepath = "<?php print \yii\helpers\Url::base(); ?>";
 
         </script>
