@@ -13,7 +13,15 @@ class ContactController extends \yii\web\Controller {
 
         public function actionIndex() {
                 $model = new ContactUs();
+                $model->doc = date('Y-m-d');
                 if ($model->load(Yii::$app->request->post()) && $model->save()) {
+//                        Yii::$app->mailer->compose()
+//                                ->setFrom('siyad@intersmart.in')
+//                                ->setTo('siyad@intersmart.in')
+//                                ->setSubject('Message subject')
+//                                ->setTextBody('Plain text content')
+//                                ->setHtmlBody('<b>HTML content</b>')
+//                                ->send();
                         Yii::$app->getSession()->setFlash('success', ' Your Request sent successfully');
                         return $this->redirect(['index']);
                 }
