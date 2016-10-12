@@ -85,9 +85,11 @@ class SiteController extends Controller {
                         return $this->goHome();
                 }
 
-                $model = new StudentLoginForm();
+                $model = new UserDetails();
                 if ($model->load(Yii::$app->request->post()) && $model->login()) {
-                        return $this->redirect(['students/my-account']);
+                        var_dump(Yii::$app->request->post('email'));
+                        exit;
+                        return $this->redirect(['Myaccount/Index']);
                 } else {
                         return $this->render('login', [
                                     'model' => $model,
