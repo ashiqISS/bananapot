@@ -11,6 +11,7 @@
                         ['label' => 'Dashboard', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
                         ['label' => 'Admin Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/users-admin']],
                         ['label' => 'Users', 'icon' => 'fa fa-file-code-o', 'url' => ['/users']],
+                        ['label' => 'Static Content', 'icon' => 'fa fa-file-code-o', 'url' => ['/static-page']],
                         [
                             'label' => 'Master Entries',
                             'icon' => 'fa fa-share',

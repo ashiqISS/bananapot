@@ -12,10 +12,14 @@ $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="faq-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
+    <!--<h1><?= Html::encode($this->title) ?></h1>-->
+    <a class="btn btn-success btn-success-form" href="<?php echo Yii::$app->homeUrl . 'faq' ?>" id="add-note">
+        <span>Manage Faq</span>
+    </a>
+    <?=
+    $this->render('_form', [
         'model' => $model,
-    ]) ?>
+    ])
+    ?>
 
 </div>
