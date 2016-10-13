@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # yii console command
 /yii
 
@@ -35,3 +36,38 @@ phpunit.phar
 /frontend/config/
 /frontend/assets/
 !/vendor/
+=======
+# yii console command
+/yii
+
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
+/vendor/
+>>>>>>> branch 'develop-1.0' of https://github.com/ashiqISS/bananapot.git

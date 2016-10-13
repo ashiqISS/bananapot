@@ -18,6 +18,10 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <link rel="stylesheet" href="<?php echo Yii::$app->homeUrl; ?>/css/custom.css">
         <script type="text/javascript">
                 var baseurl = "<?php print \yii\helpers\Url::base() . "/index.php/?r="; ?>";
+
+        <script type="text/javascript">
+                var baseurl = "<?php print \yii\helpers\Url::base() . "/index.php/"; ?>";
+
                 var basepath = "<?php print \yii\helpers\Url::base(); ?>";
 
         </script>
