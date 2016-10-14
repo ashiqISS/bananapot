@@ -97,18 +97,12 @@ use kartik\date\DatePicker;
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
-                                                                                <?php
-                                                                                echo DatePicker::widget([
-                                                                                    'name' => 'check_issue_date',
-                                                                                    'value' => date('d-M-Y', strtotime('+2 days')),
-                                                                                    'options' => ['placeholder' => 'Select issue date ...'],
-                                                                                    'pluginOptions' => [
-                                                                                        'class' => 'input__label input__label--fumi',
-                                                                                        'format' => 'dd-M-yyyy',
-                                                                                        'todayHighlight' => true
-                                                                                    ]
-                                                                                ]);
-                                                                                ?>
+                                                                                <?= Html::activeTextInput($model, 'dob', ['class' => 'input__field input__field--fumi']); ?>
+                                                                                <label class="input__label input__label--fumi" for="input-24">
+                                                                                        <i class="fa fa-fw fa-user icon icon--fumi" aria-hidden="true"></i>
+                                                                                        <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'dob'); ?>:</span>
+                                                                                </label>
+                                                                                <?= Html::error($model, 'dob'); ?>
                                                                         </span>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">

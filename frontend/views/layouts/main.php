@@ -37,20 +37,7 @@ $bundle = AppAsset::register($this);
                                         <div class="row">
                                                 <div class="col-xs-12">
                                                         <ul>
-                                                                <li><a href="#" class="active">Home</a></li>
-                                                                <li class="dropdown collection_drop">
-                                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
-                                                                        <ul class="dropdown-menu">
-                                                                                <li><a href="#">Action</a></li>
-                                                                                <li><a href="#">Another action</a></li>
-                                                                                <li><a href="#">Something else here</a></li>
-                                                                        </ul>
-                                                                </li>
-                                                                <li><a href="#">Blog</a></li>
-                                                                <li><a href="#">About Us</a></li>
-                                                                <li><a href="#">Login</a></li>
-                                                                <li><a href="#">Contact</a></li>
-=======
+
                                                                 <li><?= Html::a('Home', ['site/index'], ['class' => 'active']); ?></li>
                                                                 <li class="dropdown collection_drop">
                                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
@@ -64,7 +51,7 @@ $bundle = AppAsset::register($this);
                                                                 <li><a href="#">About Us</a></li>
                                                                 <li><?= Html::a('Login', ['site/login']) ?></li>
                                                                 <li><?= Html::a('Sign Up', ['site/signup']) ?></li>
->>>>>>> branch 'develop-1.0' of https://github.com/ashiqISS/bananapot.git
+
                                                         </ul>
                                                 </div>
                                         </div>
