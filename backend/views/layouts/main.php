@@ -21,6 +21,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
                 var basepath = "<?php print \yii\helpers\Url::base(); ?>";
 
         </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <?php $this->beginBody() ?>

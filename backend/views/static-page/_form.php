@@ -16,6 +16,7 @@ use dosamigos\ckeditor\CKEditor;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'category_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'canonical_name')->textInput(['readonly' => true], ['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tittle')->textInput(['maxlength' => true]) ?>
     <?=
@@ -40,3 +41,21 @@ use dosamigos\ckeditor\CKEditor;
     <?php ActiveForm::end(); ?>
 
 </div>
+<script>
+        $(document).ready(function () {
+
+            $('#staticpage-category_name').keyup(function () {
+                $('#staticpage-canonical_name').val(slug($(this).val()));
+            });
+
+
+        });
+        var slug = function (str) {
+            var $slug = '';
+            var trimmed = $.trim(str);
+            $slug = trimmed.replace(/[^a-z0-9-]/gi, '-').
+                    replace(/-+/g, '-').
+                    replace(/^-|-$/g, '');
+            return $slug.toLowerCase();
+        }
+</script>

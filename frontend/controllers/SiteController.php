@@ -205,7 +205,7 @@ class SiteController extends Controller {
         }
 
         public function actionStatic($page) {
-                $model = StaticPage::find()->where(['status' => 1, 'category_name' => $page])->one();
+                $model = StaticPage::find()->where(['status' => 1, 'canonical_name' => $page])->one();
                 return $this->render('staticPage', [
                             'model' => $model,
                 ]);

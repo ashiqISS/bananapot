@@ -63,13 +63,14 @@ class StaticPageController extends Controller {
                 $model = new StaticPage();
 
                 if ($model->load(Yii::$app->request->post())) {
+                        $model->canonical_name = $_POST['StaticPage']['canonical_name'];
                         $file = UploadedFile::getInstance($model, 'image');
                         if ($file)
                                 $model->image = $file->extension;
                         if ($model->save()) {
                                 if ($file) {
-                                        $model->image = UploadedFile::getInstance($model, 'image');
-                                        if ($model->upload($model)) {
+                                        //$model->image = UploadedFile::getInstance($model, 'image');
+                                        if ($model->upload($file, $model->id)) {
                                                 // file is uploaded successfully
                                         }
                                 }
@@ -90,9 +91,23 @@ class StaticPageController extends Controller {
          */
         public function actionUpdate($id) {
                 $model = $this->findModel($id);
-
-                if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                        return $this->redirect(['view', 'id' => $model->id]);
+                $images = $model->image;
+                if ($model->load(Yii::$app->request->post())) {
+                        $file = UploadedFile::getInstance($model, 'image');
+                        if ($file) {
+                                $model->image = $file->extension;
+                        } else {
+                                $model->image = $images;
+                        }
+                        if ($model->save()) {
+                                if ($file) {
+                                        //$model->image = UploadedFile::getInstance($model, 'image');
+                                        if ($model->upload($file, $model->id)) {
+                                                // file is uploaded successfully
+                                        }
+                                }
+                                return $this->redirect(['index']);
+                        }
                 } else {
                         return $this->render('update', [
                                     'model' => $model,

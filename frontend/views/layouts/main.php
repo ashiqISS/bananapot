@@ -47,7 +47,7 @@ $bundle = AppAsset::register($this);
                                     </ul>
                                 </li>
                                 <li><a href="#">Blog</a></li>
-                                <li><?= Html::a('About Us', ['/site/static', 'page' => 'About Us']); ?></li>
+                                <li><?= Html::a('About Us', ['/site/static', 'page' => 'about-us']); ?></li>
                                 <!--<li><a href="#">About Us</a></li>-->
                                 <li><a href="#">Login</a></li>
                                 <!--<li><a href="#">Contact</a></li>-->
@@ -266,6 +266,7 @@ $bundle = AppAsset::register($this);
                                     <li><a href="">Security & Privacy</a></li>
                                     <li><a href="">Help</a></li>
                                     <li><a href="">Customer Services</a></li>
+                                    <li><?= Html::a('Term Of Use', ['/site/static', 'page' => 'terms-use']); ?></li>
                                     <li><a href="">Term Of Use</a></li>
                                     <li><a href="">Site Map</a></li>
                                 </ul>

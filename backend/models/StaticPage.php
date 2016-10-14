@@ -10,6 +10,7 @@ use yii\web\UploadedFile;
  *
  * @property integer $id
  * @property string $category_name
+ * @property string $category_name
  * @property string $tittle
  * @property string $content
  * @property string $small_content
@@ -25,6 +26,8 @@ class StaticPage extends \yii\db\ActiveRecord {
         /**
          * @inheritdoc
          */
+        public $file;
+
         public static function tableName() {
                 return 'static_page';
         }
@@ -42,17 +45,21 @@ class StaticPage extends \yii\db\ActiveRecord {
                 ];
         }
 
-        public function upload($model) {
-
-
+        public function upload($file, $id) {
                 if (\yii::$app->basePath . '/../uploads') {
                         chmod(\yii::$app->basePath . '/../uploads', 0777);
 
-                        if (!is_dir(\yii::$app->basePath . '/../uploads/' . $model->id . '/'))
-                                mkdir(\yii::$app->basePath . '/../uploads/' . $model->id . '/');
-                        chmod(\yii::$app->basePath . '/../uploads/' . $model->id . '/', 0777);
-                        if ($this->image->saveAs(\yii::$app->basePath . '/../uploads/' . $model->id . '/' . $model->id . '.' . $this->image->extension))
-                                chmod(\yii::$app->basePath . '/../uploads/' . $model->id . '/' . $model->id . '.' . $this->image->extension, 0777);
+                        if (!is_dir(\yii::$app->basePath . '/../uploads/static/')) {
+                                mkdir(\yii::$app->basePath . '/../uploads/static/');
+                                chmod(\yii::$app->basePath . '/../uploads/static/', 0777);
+                        }
+                        if (!is_dir(\yii::$app->basePath . '/../uploads/static/' . $id . '/')) {
+                                mkdir(\yii::$app->basePath . '/../uploads/static/' . $id . '/');
+                                chmod(\yii::$app->basePath . '/../uploads/static/' . $id . '/', 0777);
+                        }
+
+                        if ($file->saveAs(\yii::$app->basePath . '/../uploads/static/' . $id . '/' . $id . '.' . $file->extension))
+                                chmod(\yii::$app->basePath . '/../uploads/static/' . $id . '/' . $id . '.' . $file->extension, 0777);
                         return true;
                 }
 
