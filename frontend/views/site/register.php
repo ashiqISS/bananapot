@@ -4,7 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
-use kartik\date\DatePicker;
+//use kartik\date\DatePicker;
+use yii\yiisoft\jui\JuiAsset;
 ?>
 <html>
         <head>
@@ -97,7 +98,14 @@ use kartik\date\DatePicker;
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-4">
                                                                         <span class="input input--fumi">
+                                                                                <?php
+//                                                                                $form->field($model, 'from_date')->widget(yii\yiisoft\jui\JuiAsset::classname(), [
+////                                                                                        'language' => 'ru',
+//                                                                                        //'dateFormat' => 'yyyy-MM-dd',
+//                                                                                ])
+                                                                                ?>
                                                                                 <?= Html::activeTextInput($model, 'dob', ['class' => 'input__field input__field--fumi']); ?>
+
                                                                                 <label class="input__label input__label--fumi" for="input-24">
                                                                                         <i class="fa fa-fw fa-user icon icon--fumi" aria-hidden="true"></i>
                                                                                         <span class="input__label-content input__label-content--fumi"><?= Html::activeLabel($model, 'dob'); ?>:</span>
